@@ -1177,36 +1177,28 @@ reply(cpref)
 cpref = ` *Prefix Saat ini: ( ${prefix} )*`
 reply(cpref)
 }
-if(budy.includes('KurrXd')){
-cpref = `Hayo Ngomongin KurrXd Yaaa Aowkowkwoo`
-reply(cpref)
-}
-if(budy.includes('KurrTod')){
-cpref = `Hayo Ngomongin KurrXd  Yaaa Aowkowkwoo`
-reply(cpref)
-}
 if(budy.includes('Assalamualaikum')){
-cpref = `Hay Saya KurrXd Botz Whatsapp Ketik .menu Untuk Mengakses`
+cpref = `Waalaikumsayang,  Eh Waalaikumsalam`
 reply(cpref)
 }
 if(budy.includes('assalamualaikum')){
-cpref = `Hay Saya KurrXd Botz Whatsapp Ketik .menu Untuk Mengakses`
+cpref = `Waalaikumsayang,  Eh Waalaikumsalam`
 reply(cpref)
 }
 if(budy.includes('Hai')){
-cpref = `Hay Saya KurrXd Botz Whatsapp Ketik .menu Untuk Mengakses`
+cpref = `Hay Saya Botz Whatsapp Ketik .menu Untuk Mengakses`
 reply(cpref)
 }
 if(budy.includes('hai')){
-cpref = `Hay Saya KurrXd Botz Whatsapp Ketik .menu Untuk Mengakses`
+cpref = `Hay Saya Botz Whatsapp Ketik .menu Untuk Mengakses`
 reply(cpref)
 }
 if(budy.includes('Bot')){
-cpref = `iya gue emng bot ga seneng GELUD pepeq`
+cpref = `Iya Saya Bot Kenapa?  Ada Yang Bisa Saya Bantu?  Ketik .menu untuk Info Lebih Lanjut`
 reply(cpref)
 }
 if(budy.includes('bot')){
-cpref = `iya gue emng bot ga seneng GELUD pepeq`
+cpref = `Iya Saya Bot Kenapa?  Ada Yang Bisa Saya Bantu?  Ketik .menu untuk Info Lebih Lanjut`
 reply(cpref)
 }
            if (budy.startsWith('>')){
@@ -5672,7 +5664,7 @@ var nn = body.slice(9)
 								const { dl_link, thumb, title, filesizeF, filesize } = res
 								axios.get(`https://tinyurl.com/api-create.php?url=${dl_link}`)
 								.then((a) => {
-								if (Number(filesize) >= 40000) return sendMediaURL(from, thumb, `❏ *YTmp4*\n\n❏ *Title* : ${title}\n❏ *Ext* : MP3\n*Filesize* : ${filesizeF}\n*Link* : ${a.data}\n\n_Maaf durasi melebihi batas maksimal, Silahkan klik link diatas_`)
+								if (Number(filesize) >= 4000000000) return sendMediaURL(from, thumb, `❏ *YTmp4*\n\n❏ *Title* : ${title}\n❏ *Ext* : MP3\n*Filesize* : ${filesizeF}\n*Link* : ${a.data}\n\n_Maaf durasi melebihi batas maksimal, Silahkan klik link diatas_`)
 								sendFileFromUrl(dl_link, document, {mimetype: 'video/mp4', filename: `${title}.mp4`, quoted: ftrol, contextInfo: { forwardingScore: 508, isForwarded: true, externalAdReply:{title:title,body:" YTMP4",mediaType:"2",thumbnail:getBuffer(thumb),sourceUrl:`${body.slice(7)}`}}}).catch(() => reply(mess.error.api))
 							})
 							})
