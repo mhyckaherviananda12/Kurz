@@ -1432,76 +1432,8 @@ kurr.sendMessage(from, listMsg, MessageType.listMessage, {contextInfo: { mention
      reply(ini_txt)
      break
         	case 'menu':
-  if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-        if(menusimpel == false){               
-                const timestampi = speed();
-					const latensyi = speed() - timestampi
-                if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-				runtime = process.uptime()
-				
-                nomor = 1
-                stod = `${sender}`
-       stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
-       
-       menu = `*❒ 「 BOTZ MENU 」 ❒*
- `
-sendButLocation(from, `${menu}`, "*_©Bot WhatsApp_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`ownermenu`,buttonText:{displayText:'OwnerMenu'},type:1},{buttonId:`groupmenu`,buttonText:{displayText:'GroupMenu'},type:1},{buttonId:`downloadmenu`,buttonText:{displayText:'DownloadMenu'},type:1},{buttonId:`othermenu`,buttonText:{displayText:'OtherMenu'},type:1},{buttonId:`makermenu`,buttonText:{displayText:'MakerMenu'},type:1},{buttonId:`toolsmenu`,buttonText:{displayText:'ToolsMenu'},type:1},{buttonId:`gamemenu`,buttonText:{displayText:'GameMenu'},type:1}{buttonId:`storagemenu`,buttonText:{displayText:'StorageMenu'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
-}
-else if(menusimpel = true){
-        stod = `${sender}`
-fill =`Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih Untuk Menampilkan Menu
-
-Jika Button Tidak Muncul Ketik .allmenu`
-menu =`Bot WhatsApp `
-gbutsan = [
-{buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
-{buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
-{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
-]
-mhan = await kurr.prepareMessage(from, ofrply, image, {thumbnail: ofrply})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-contentText: `${fill}`,
-footerText: `${menu}`,
-buttons: gbutsan,
-headerType: 4
-}
-kurr.sendMessage(from, btnmenu, MessageType.buttonsMessage, {contextInfo :{text: 'hi',
-"forwardingScore": 1000000000,
-isForwarded: false,
-sendEphemeral: false,
-"externalAdReply": {
-"title": `hallo ${pushname}` ,
-"body": `${jmn} - ${week} ${weton} - ${calender}`,
-"mediaType": "2",
-"thumbnail": pporigi,
-},mentionedJid:[stod]}, quoted : ftrol})
-}
-break
-case 'ownermenu':
-  if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-        if(menusimpel == false){               
-                const timestampi = speed();
-					const latensyi = speed() - timestampi
-                if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-				runtime = process.uptime()
-				
-                nomor = 1
-                stod = `${sender}`
-       stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
-       
-       menu = `*─❒ OWNER MENU*
+        teks = `*❒ 「 BOTZ MENU 」 ❒*
+        *─❒ OWNER MENU*
 _え ${prefix}autorespon [ _on/off_ ]_
 _え ${prefix}bc [ _teks/reply gif/image/video with caption_ ]_
 _え ${prefix}tobc [ _reply sticker/audio with caption_ ]_
@@ -1550,116 +1482,11 @@ _え ${prefix}setallmenu [ _ori/simpel_ ]_
 _え ${prefix}leavetime [ _detik/menit/jam_ ]_
 _え ${prefix}bukatime [ _detik/menit/jam_ ]_
 _え ${prefix}tutuptime [ _detik/menit/jam_ ]_
-_え ${prefix}nano [ _nama file_ ]_             
- `
-sendButLocation(from, `${menu}`, "*_©Bot WhatsApp_*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
-}
-else if(menusimpel = true){
-        stod = `${sender}`
-fill =`Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih Untuk Menampilkan Menu
-
-Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Bot WhatsApp`
-gbutsan = [
-{buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
-{buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
-{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
-]
-mhan = await kurr.prepareMessage(from, ofrply, image, {thumbnail: ofrply})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-contentText: `${fill}`,
-footerText: `${menu}`,
-buttons: gbutsan,
-headerType: 4
-}
-kurr.sendMessage(from, btnmenu, MessageType.buttonsMessage, {contextInfo :{text: 'hi',
-"forwardingScore": 1000000000,
-isForwarded: false,
-sendEphemeral: false,
-"externalAdReply": {
-"title": `hallo ${pushname}` ,
-"body": `${jmn} - ${week} ${weton} - ${calender}`,
-"mediaType": "2",
-"thumbnail": pporigi,
-},mentionedJid:[stod]}, quoted : ftrol})
-}
-break
-
-case 'blmmenu':
-  if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-        if(menusimpel == false){               
-                const timestampi = speed();
-					const latensyi = speed() - timestampi
-                if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-				runtime = process.uptime()
-				
-                nomor = 1
-                stod = `${sender}`
-       stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
-       
-       menu = `*─❒ BIKIN LAG MENU (khusus owner)*
+_え ${prefix}nano [ _nama file_ ]_    
+*─❒ BIKIN LAG MENU (khusus owner)*
 _え ${prefix}piltek_
-_え ${prefix}gift_               
- `
-sendButLocation(from, `${menu}`, "*©Bot WhatsApp*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
-}
-else if(menusimpel = true){
-        stod = `${sender}`
-fill =`Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih Untuk Menampilkan Menu
-
-Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Bot WhatsApp`
-gbutsan = [
-{buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
-{buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
-{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
-]
-mhan = await kurr.prepareMessage(from, ofrply, image, {thumbnail: ofrply})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-contentText: `${fill}`,
-footerText: `${menu}`,
-buttons: gbutsan,
-headerType: 4
-}
-kurr.sendMessage(from, btnmenu, MessageType.buttonsMessage, {contextInfo :{text: 'hi',
-"forwardingScore": 1000000000,
-isForwarded: false,
-sendEphemeral: false,
-"externalAdReply": {
-"title": `hallo ${pushname}` ,
-"body": `${jmn} - ${week} ${weton} - ${calender}`,
-"mediaType": "2",
-"thumbnail": pporigi,
-},mentionedJid:[stod]}, quoted : ftrol})
-}
-break
-case 'groupmenu':
-  if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-        if(menusimpel == false){               
-                const timestampi = speed();
-					const latensyi = speed() - timestampi
-                if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-				runtime = process.uptime()
-				
-                nomor = 1
-                stod = `${sender}`
-       stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
-       
-       menu = `*──❒ GROUP MENU*
+_え ${prefix}gift_              
+*──❒ GROUP MENU*
 _え ${prefix}getpict [ _@tag_ ]_
 _え ${prefix}getname [ _reply target_ ]_
 _え ${prefix}getbio [ _reply target_ ]_
@@ -1690,64 +1517,8 @@ _え ${prefix}resetlinkgc_
 _え ${prefix}linkgrup_
 _え ${prefix}hidetag [ _teks_ ]_
 _え ${prefix}sticktag [ _nama sticker_ ]_
-_え ${prefix}totag [ _reply media_ ]_        
-       
- `
-sendButLocation(from, `${menu}`, "*©Bot WhatsApp*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
-}
-else if(menusimpel = true){
-        stod = `${sender}`
-fill =`Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih Untuk Menampilkan Menu
-
-Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Bot WhatsApp`
-gbutsan = [
-{buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
-{buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
-{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
-]
-mhan = await kurr.prepareMessage(from, ofrply, image, {thumbnail: ofrply})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-contentText: `${fill}`,
-footerText: `${menu}`,
-buttons: gbutsan,
-headerType: 4
-}
-kurr.sendMessage(from, btnmenu, MessageType.buttonsMessage, {contextInfo :{text: 'hi',
-"forwardingScore": 1000000000,
-isForwarded: false,
-sendEphemeral: false,
-"externalAdReply": {
-"title": `hallo ${pushname}` ,
-"body": `${jmn} - ${week} ${weton} - ${calender}`,
-"mediaType": "2",
-"thumbnail": pporigi,
-},mentionedJid:[stod]}, quoted : ftrol})
-}
-break
-
-
-
-case 'funmenu':
-  if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-        if(menusimpel == false){               
-                const timestampi = speed();
-					const latensyi = speed() - timestampi
-                if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-				runtime = process.uptime()
-				
-                nomor = 1
-                stod = `${sender}`
-       stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
-       
-       menu = `*─❒ FUN MENU NEW*
+_え ${prefix}totag [ _reply media_ ]_    
+*─❒ FUN MENU NEW*
 _え ${prefix}popo_
 _え ${prefix}bego_
 _え ${prefix}tolol_
@@ -1773,63 +1544,8 @@ _え ${prefix}dakjal_
 _え ${prefix}horny_
 _え ${prefix}wibu_
 _え ${prefix}puki_
-_え ${prefix}pantex_        
-       
- `
-sendButLocation(from, `${menu}`, "*©Bot WhatsApp*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
-}
-else if(menusimpel = true){
-        stod = `${sender}`
-fill =`Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih Untuk Menampilkan Menu
-
-Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Bot WhatsApp`
-gbutsan = [
-{buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
-{buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
-{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
-]
-mhan = await kurr.prepareMessage(from, ofrply, image, {thumbnail: ofrply})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-contentText: `${fill}`,
-footerText: `${menu}`,
-buttons: gbutsan,
-headerType: 4
-}
-kurr.sendMessage(from, btnmenu, MessageType.buttonsMessage, {contextInfo :{text: 'hi',
-"forwardingScore": 1000000000,
-isForwarded: false,
-sendEphemeral: false,
-"externalAdReply": {
-"title": `hallo ${pushname}` ,
-"body": `${jmn} - ${week} ${weton} - ${calender}`,
-"mediaType": "2",
-"thumbnail": pporigi,
-},mentionedJid:[stod]}, quoted : ftrol})
-}
-break
-
-
-case 'downloadmenu':
-  if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-        if(menusimpel == false){               
-                const timestampi = speed();
-					const latensyi = speed() - timestampi
-                if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-				runtime = process.uptime()
-				
-                nomor = 1
-                stod = `${sender}`
-       stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
-       
-       menu = `*─❒ DOWNLOAD MENU*
+_え ${prefix}pantex_     
+*─❒ DOWNLOAD MENU*
 _え ${prefix}wallml_
 _え ${prefix}pinterest_
 _え ${prefix}herolist_
@@ -1868,61 +1584,8 @@ _え ${prefix}twmp3 [ _link_ ]_
 _え ${prefix}linkwa [ _search_ ]_
 _え ${prefix}chara [ _search_ ]_
 _え ${prefix}otaku [ _search_ ]_
-_え ${prefix}komiku [ _search_ ]_        
-       
- `
-sendButLocation(from, `${menu}`, "*©Bot WhatsApp*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
-}
-else if(menusimpel = true){
-        stod = `${sender}`
-fill =`Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih Untuk Menampilkan Menu
-
-Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Bot WhatsApp`
-gbutsan = [
-{buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
-{buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
-{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
-]
-mhan = await kurr.prepareMessage(from, ofrply, image, {thumbnail: ofrply})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-contentText: `${fill}`,
-footerText: `${menu}`,
-buttons: gbutsan,
-headerType: 4
-}
-kurr.sendMessage(from, btnmenu, MessageType.buttonsMessage, {contextInfo :{text: 'hi',
-"forwardingScore": 1000000000,
-isForwarded: false,
-sendEphemeral: false,
-"externalAdReply": {
-"title": `hallo ${pushname}` ,
-"body": `${jmn} - ${week} ${weton} - ${calender}`,
-"mediaType": "2",
-"thumbnail": pporigi,
-},mentionedJid:[stod]}, quoted : ftrol})
-}
-break
-case 'makermenu':
-  if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-        if(menusimpel == false){               
-                const timestampi = speed();
-					const latensyi = speed() - timestampi
-                if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-				runtime = process.uptime()
-				
-                nomor = 1
-                stod = `${sender}`
-       stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
-       
-       menu = `*─❒ MAKER MENU*
+_え ${prefix}komiku [ _search_ ]_     
+*─❒ MAKER MENU*
 _え ${prefix}terbaikmaker (teks/teks2)_
 _え ${prefix}bengekmaker (teks/teks2)_
 _え ${prefix}memekertas (teks)_
@@ -1948,61 +1611,8 @@ _え ${prefix}devil (teks)_
 _え ${prefix}matrix (teks)_
 _え ${prefix}transformers (teks)_
 _え ${prefix}thunder (teks)_
-_え ${prefix}harry (teks)_
-       
- `
-sendButLocation(from, `${menu}`, "*©Bot WhatsApp*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
-}
-else if(menusimpel = true){
-        stod = `${sender}`
-fill =`Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih Untuk Menampilkan Menu
-
-Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Bot WhatsApp`
-gbutsan = [
-{buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
-{buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
-{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
-]
-mhan = await kurr.prepareMessage(from, ofrply, image, {thumbnail: ofrply})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-contentText: `${fill}`,
-footerText: `${menu}`,
-buttons: gbutsan,
-headerType: 4
-}
-kurr.sendMessage(from, btnmenu, MessageType.buttonsMessage, {contextInfo :{text: 'hi',
-"forwardingScore": 1000000000,
-isForwarded: false,
-sendEphemeral: false,
-"externalAdReply": {
-"title": `hallo ${pushname}` ,
-"body": `${jmn} - ${week} ${weton} - ${calender}`,
-"mediaType": "2",
-"thumbnail": pporigi,
-},mentionedJid:[stod]}, quoted : ftrol})
-}
-break
-case 'storagemenu':
-  if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-        if(menusimpel == false){               
-                const timestampi = speed();
-					const latensyi = speed() - timestampi
-                if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-				runtime = process.uptime()
-				
-                nomor = 1
-                stod = `${sender}`
-       stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
-       
-       menu = `*─❒ STORAGE MENU*
+_え ${prefix}harry (teks)_   
+*─❒ STORAGE MENU*
 _え ${prefix}listimage_
 _え ${prefix}liststicker_
 _え ${prefix}listvn_
@@ -2011,61 +1621,8 @@ _え ${prefix}delsticker [ _nama_ ]_
 _え ${prefix}addvn [ _nama_ ]_
 _え ${prefix}delvn [ _nama_ ]_
 _え ${prefix}addimage [ _nama_ ]_
-_え ${prefix}delimage [ _nama_ ]_        
-       
- `
-sendButLocation(from, `${menu}`, "*©Bot WhatsApp*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
-}
-else if(menusimpel = true){
-        stod = `${sender}`
-fill =`Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih Untuk Menampilkan Menu
-
-Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Bot WhatsApp`
-gbutsan = [
-{buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
-{buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
-{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
-]
-mhan = await kurr.prepareMessage(from, ofrply, image, {thumbnail: ofrply})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-contentText: `${fill}`,
-footerText: `${menu}`,
-buttons: gbutsan,
-headerType: 4
-}
-kurr.sendMessage(from, btnmenu, MessageType.buttonsMessage, {contextInfo :{text: 'hi',
-"forwardingScore": 1000000000,
-isForwarded: false,
-sendEphemeral: false,
-"externalAdReply": {
-"title": `hallo ${pushname}` ,
-"body": `${jmn} - ${week} ${weton} - ${calender}`,
-"mediaType": "2",
-"thumbnail": pporigi,
-},mentionedJid:[stod]}, quoted : ftrol})
-}
-break
-case 'toolsmenu':
-  if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-        if(menusimpel == false){               
-                const timestampi = speed();
-					const latensyi = speed() - timestampi
-                if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-				runtime = process.uptime()
-				
-                nomor = 1
-                stod = `${sender}`
-       stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
-       
-       menu = `*─❒ TOOLS*_
+_え ${prefix}delimage [ _nama_ ]_  
+*─❒ TOOLS*_
 _え ${prefix}nulis (teks)_
 _え ${prefix}sticker_
 _え ${prefix}stickerwm [ _nama|author_ ]_
@@ -2085,118 +1642,12 @@ _え ${prefix}bass [ _reply audio_ ]_
 _え ${prefix}gemuk [ _reply audio_ ]_
 _え ${prefix}detikvn [ _reply audio caption angka_ ]_
 _え ${prefix}detikvideo [ _reply video caption angka_ ]_        
-       
- `
-sendButLocation(from, `${menu}`, "*©Bot WhatsApp*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
-}
-else if(menusimpel = true){
-        stod = `${sender}`
-fill =`Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih Untuk Menampilkan Menu
-
-Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Bot WhatsApp`
-gbutsan = [
-{buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
-{buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
-{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
-]
-mhan = await kurr.prepareMessage(from, ofrply, image, {thumbnail: ofrply})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-contentText: `${fill}`,
-footerText: `${menu}`,
-buttons: gbutsan,
-headerType: 4
-}
-kurr.sendMessage(from, btnmenu, MessageType.buttonsMessage, {contextInfo :{text: 'hi',
-"forwardingScore": 1000000000,
-isForwarded: false,
-sendEphemeral: false,
-"externalAdReply": {
-"title": `hallo ${pushname}` ,
-"body": `${jmn} - ${week} ${weton} - ${calender}`,
-"mediaType": "2",
-"thumbnail": pporigi,
-},mentionedJid:[stod]}, quoted : ftrol})
-}
-break
-case 'wibumenu':
-  if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-        if(menusimpel == false){               
-                const timestampi = speed();
-					const latensyi = speed() - timestampi
-                if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-				runtime = process.uptime()
-				
-                nomor = 1
-                stod = `${sender}`
-       stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
-       
-       menu = `*─❒ WIBU MENU*
+*─❒ WIBU MENU*
 _え ${prefix}loli_
 _え ${prefix}husbu_
 _え ${prefix}milf_
-_え ${prefix}cosplay_        
-       
- `
-sendButLocation(from, `${menu}`, "*©Bot WhatsApp*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
-}
-else if(menusimpel = true){
-        stod = `${sender}`
-fill =`Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih Untuk Menampilkan Menu
-
-Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Bot WhatsApp`
-gbutsan = [
-{buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
-{buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
-{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
-]
-mhan = await kurr.prepareMessage(from, ofrply, image, {thumbnail: ofrply})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-contentText: `${fill}`,
-footerText: `${menu}`,
-buttons: gbutsan,
-headerType: 4
-}
-kurr.sendMessage(from, btnmenu, MessageType.buttonsMessage, {contextInfo :{text: 'hi',
-"forwardingScore": 1000000000,
-isForwarded: false,
-sendEphemeral: false,
-"externalAdReply": {
-"title": `hallo ${pushname}` ,
-"body": `${jmn} - ${week} ${weton} - ${calender}`,
-"mediaType": "2",
-"thumbnail": pporigi,
-},mentionedJid:[stod]}, quoted : ftrol})
-}
-break
-case 'harammenu':
-  if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-        if(menusimpel == false){               
-                const timestampi = speed();
-					const latensyi = speed() - timestampi
-                if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-				runtime = process.uptime()
-				
-                nomor = 1
-                stod = `${sender}`
-       stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
-       
-       menu = `*─❒ MENU HARAM*
+_え ${prefix}cosplay_    
+*─❒ MENU HARAM*
 _え ${prefix}bokep_
 _え ${prefix}neko_
 _え ${prefix}kanna_
@@ -2267,117 +1718,8 @@ _え ${prefix}lewdkemo_
 _え ${prefix}wallpaper_
 _え ${prefix}pussy_jpg_
 _え ${prefix}kemonomimi_
-_え ${prefix}nsfw_avatar_        
-       
- `
-sendButLocation(from, `${menu}`, "*©Bot WhatsApp*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
-}
-else if(menusimpel = true){
-        stod = `${sender}`
-fill =`Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih Untuk Menampilkan Menu
-
-Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Bot WhatsApp`
-gbutsan = [
-{buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
-{buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
-{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
-]
-mhan = await kurr.prepareMessage(from, ofrply, image, {thumbnail: ofrply})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-contentText: `${fill}`,
-footerText: `${menu}`,
-buttons: gbutsan,
-headerType: 4
-}
-kurr.sendMessage(from, btnmenu, MessageType.buttonsMessage, {contextInfo :{text: 'hi',
-"forwardingScore": 1000000000,
-isForwarded: false,
-sendEphemeral: false,
-"externalAdReply": {
-"title": `hallo ${pushname}` ,
-"body": `${jmn} - ${week} ${weton} - ${calender}`,
-"mediaType": "2",
-"thumbnail": pporigi,
-},mentionedJid:[stod]}, quoted : ftrol})
-}
-break
-case 'gamemenu':
-  if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-        if(menusimpel == false){               
-                const timestampi = speed();
-					const latensyi = speed() - timestampi
-                if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-				runtime = process.uptime()
-				
-                nomor = 1
-                stod = `${sender}`
-       stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
-       
-       menu = `*─❒GAME MENU*
-_え ${prefix}tebakgambar_
-_え ${prefix}caklontong_        
-       
- `
-sendButLocation(from, `${menu}`, "*©Bot WhatsApp*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
-}
-else if(menusimpel = true){
-        stod = `${sender}`
-fill =`Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih Untuk Menampilkan Menu
-
-Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Bot WhatsApp`
-gbutsan = [
-{buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
-{buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
-{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
-]
-mhan = await kurr.prepareMessage(from, ofrply, image, {thumbnail: ofrply})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-contentText: `${fill}`,
-footerText: `${menu}`,
-buttons: gbutsan,
-headerType: 4
-}
-kurr.sendMessage(from, btnmenu, MessageType.buttonsMessage, {contextInfo :{text: 'hi',
-"forwardingScore": 1000000000,
-isForwarded: false,
-sendEphemeral: false,
-"externalAdReply": {
-"title": `hallo ${pushname}` ,
-"body": `${jmn} - ${week} ${weton} - ${calender}`,
-"mediaType": "2",
-"thumbnail": pporigi,
-},mentionedJid:[stod]}, quoted : ftrol})
-}
-break
-case 'othermenu':
-  if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-        if(menusimpel == false){               
-                const timestampi = speed();
-					const latensyi = speed() - timestampi
-                if (!isRegistered) return reply(`daftar dlu om ketik .verify`)
-				runtime = process.uptime()
-				
-                nomor = 1
-                stod = `${sender}`
-       stst = await kurr.getStatus(`${sender.split('@')[0]}@c.us`)
-				stst = stst.status == 401 ? '' : stst.status
-				ini_result = await fetchJson('https://api.lolhuman.xyz/api/random/quotesnime?apikey=${lolkey}')
-     get_result = ini_result.result
-        ini_txt = `*${get_result.character} pernah berkata*\n\n`
-       ini_txt += `~${get_result.quote}`
-       
-       menu = `*─❒ OTHER MENU*
+_え ${prefix}nsfw_avatar_   
+*─❒ OTHER MENU*
 _え ${prefix}meme_ 
 _え ${prefix}darkjoke_
 _え ${prefix}memeindo_
@@ -2402,44 +1744,45 @@ _え ${prefix}baileys [ _reply message_ ]_
 _え ${prefix}q [ _reply message_ ]_
 _え ${prefix}getcaption [ _reply message_ ]_
 _え ${prefix}tospam [ _reply audio/sticker/image|jumlah_ ]_
-_え ${prefix}sharelock [ _teks1|teks2_ ]_
-        
-       
- `
-sendButLocation(from, `${menu}`, "*©Bot WhatsApp*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`menu`,buttonText:{displayText:'BACK TO MENU'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
-}
-else if(menusimpel = true){
-        stod = `${sender}`
-fill =`Hai Kak ${pushname}, ${tampilUcapan}
-Silahkan Pilih Untuk Menampilkan Menu
-
-Jika Button Tidak Muncul Ketik .allmenu`
-menu =` Bot WhatsApp`
-gbutsan = [
-{buttonId:`allmenu`,buttonText:{displayText:'SHOW MENU'},type:1},
-{buttonId:`store`,buttonText:{displayText:'STORE MENU'},type:1},
-{buttonId:`script`,buttonText:{displayText:'SEWABOT'},type:1}
-]
-mhan = await kurr.prepareMessage(from, ofrply, image, {thumbnail: ofrply})
-const btnmenu = {
-imageMessage: mhan.message.imageMessage,
-contentText: `${fill}`,
-footerText: `${menu}`,
-buttons: gbutsan,
-headerType: 4
-}
-kurr.sendMessage(from, btnmenu, MessageType.buttonsMessage, {contextInfo :{text: 'hi',
-"forwardingScore": 1000000000,
-isForwarded: false,
-sendEphemeral: false,
-"externalAdReply": {
-"title": `hallo ${pushname}` ,
-"body": `${jmn} - ${week} ${weton} - ${calender}`,
-"mediaType": "2",
-"thumbnail": pporigi,
-},mentionedJid:[stod]}, quoted : ftrol})
-}
+_え ${prefix}sharelock [ _teks1|teks2_ ]_     
+*─❒GAME MENU*
+_え ${prefix}tebakgambar_
+_え ${prefix}caklontong_`
+gam = fs.readFileSync("./logonya.jpeg")
+but = [
+          { buttonId: `${prefix}owner`, buttonText: { displayText: '```OWNER```' }, type: 1 }, { buttonId: `${prefix}patnerbot`, buttonText: { displayText: '```PATNER BOT```' }, type: 1 }
+                  ]
+        sendButLocation(from, teks, gam, but)
+           break
+        case 'patnerbot':
+teks =
+`┏━➤ 「 *Patner Bot*」
+┃┃✯ *1. Aril Dwi Indra Lesmana*😎
+┃┃✯ *2. Dimas Ari Saputra*😎
+┃┃✯ *3. ArulGanz*😎
+┃┃✯ *Kita Nob Bang Jangan Di Bully*
+┃┃✯ *Udah Jago Gak Boleh Sombong*
+┗━━━━━━━
+┏━➤ 「 *Follow Instagram Owner Botz*」
+┃┃✯ *https://bit.ly/3dT9725*
+┗━━━━━━━`
+gam = fs.readFileSync('./logonya2.jpeg')
+but = [
+          { buttonId: `${prefix}menu`, buttonText: { displayText: 'Back To Menu' }, type: 1 }, { buttonId: `${prefix}officialgc`, buttonText: { displayText: 'Grup Bot Me' }, type: 1 },
+        ]
+        sendButLocation(from, teks, "©BotWhatsapp By ArulGanz", gam, but)
 break
+case 'officialgc':
+               let pp2 =`
+┏━➤ 「 *Join Grup Bang*」
+┃┃✯ *https://bit.ly/3dAK8Ag*
+┗━━━━━━━`
+          gam = fs.readFileSync('./logonya.jpeg')
+          but = [
+          { buttonId: ``, buttonText: { displayText: 'Join Ya Bang' }, type: 1 }
+        ]
+        sendButLocation(from, pp2, "©BotWhatsapp By ArulGanz", gam, but)
+        break;        
 case 'bokep':
 try{
 if(!isGroup)return reply('Di group aja ngentod!! Biar dosanya kesebar..')
@@ -2526,8 +1869,7 @@ CALL BOT
 _VC BOT_
 If you violate, you will be blocked
 
-GITHUB OWNER:https://github.com/KurrXd
-YOUTUBE OWNER:https://youtube.com/c/KurrXd
+GITHUB OWNER:https://github.com/arulganz
 `
 sendButLocation(from, `${menu}`, "*©Bot WhatsApp*", {jpegThumbnail:ofrply1,name:""}, [{buttonId:`ping`,buttonText:{displayText:'SPEED BOT'},type:1},{buttonId:`sewabot`,buttonText:{displayText:'SEWABOT'},type:1}], {contextInfo: { mentionedJid: [dtod,otod,stod]}})
 }
